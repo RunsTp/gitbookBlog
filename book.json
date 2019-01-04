@@ -1,10 +1,10 @@
 {
-    "title": "RunsTp的博客",
-    "description": "RunsTp的个人博客,php技术博客",
-    "author": "RunsTp",
+    "title": "Runs的博客",
+    "description": "Runs的个人博客,php技术博客",
+    "author": "Runs",
     "generator": "site",
     "language": "zh-hans",
-    "keywords": "RunsTp的博客,php技术博客",
+    "keywords": "Runs的博客,php技术博客",
     "styles": {
         "website": "styles/website.css"
     },
