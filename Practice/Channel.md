@@ -5,11 +5,11 @@
 ---
 某日遇到朋友需要爬取大量图片资源，但是PHP的 `Curl`，`fopen` 等都是阻塞的，网上提供的很多方案都会将图片资源读进 `buffer`，即便使用 `yield` 来实现非阻塞，一但并发数提高可能就会导致爆内存...  ~~其实都不是主要问题，主要是带宽卡着。~~  
 
-于是就那一刻就想当然的觉得可以使用 `[Swoole\Coroutine\Http\Client](https://wiki.swoole.com/wiki/page/p-coroutine_http_client.html)` 来解决这个问题，和 `Curl` 不同， 协程Client 提供了非阻塞的请求和直接写入磁盘下载文件的特性。
+于是就那一刻就想当然的觉得可以使用 [Swoole\Coroutine\Http\Client](https://wiki.swoole.com/wiki/page/p-coroutine_http_client.html) 来解决这个问题，和 `Curl` 不同， 协程Client 提供了非阻塞的请求和直接写入磁盘下载文件的特性。
 
 ### 依赖
 ---
-- [Swoole\Coroutine\Http\Client](https://wiki.swoole.com/wiki/page/p-coroutine_http_client.html) 不多说，本期主角
+- [Swoole\Coroutine\Coroutine\Channel](https://wiki.swoole.com/wiki/page/p-coroutine_channel.html) 不多说，本期主角
 - [Saber](https://github.com/swlib/saber) 高性能协程Http客户端 (作者是Swoole开发组成员，我很喜欢这个库，也很崇拜作者.jpg)
 - [Composer](https://www.phpcomposer.com/) 使用Composer安装 `Saber` 和自动加载
 
